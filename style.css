@@ -46,6 +46,9 @@ header{
 .content{
     position: relative;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .content .text{
     width: 100%;
@@ -79,4 +82,20 @@ header{
 }
 .btn:hover{
     letter-spacing: 2px;
+}
+
+/* ------------------------ */
+
+.slider{
+    position: relative;
+}
+.slider .sliders{
+    display: none;
+}
+.slider .sliders.active{
+    display: block;
+}
+.slider .sliders img{
+    width: 100%;
+    min-width: 600px;
 }
