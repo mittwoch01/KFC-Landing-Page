@@ -5,11 +5,17 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
 }
 .main{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
+    padding: 30px 100px;
     background: radial-gradient(#f0483a, #d10a20);
 }
 header{
@@ -33,5 +39,44 @@ header{
     position: relative;
     margin-left: 40px;
     color: #fff;
-    text-decoration: none;
+}
+
+/* ------------------------ */
+
+.content{
+    position: relative;
+    width: 100%;
+}
+.content .text{
+    width: 100%;
+    max-width: 600px;
+}
+.content .text h2{
+    color: #fff;
+    font-size: 5em;
+    font-weight: 300;
+}
+.content .text h2 span{
+    font-weight: 700;
+}
+.content .text p{
+    margin: 20px 0;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+.btn{
+    position: absolute;
+    display: inline-block;
+    padding: 20px 50px;
+    background-color: #fff;
+    border-radius: 40px;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: 0.25s;
+}
+.btn:hover{
+    letter-spacing: 2px;
 }
