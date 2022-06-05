@@ -89,16 +89,16 @@ header{
 
 /* ------------------------ */
 
-.slider{
+.slide{
     position: relative;
 }
-.slider .sliders{
+.slide .slides{
     display: none;
 }
-.slider .sliders.active{
+.slide .slides.active{
     display: block;
 }
-.slider .sliders img{
+.slide .slides img{
     width: 100%;
     min-width: 600px;
 }
