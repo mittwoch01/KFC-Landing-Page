@@ -162,3 +162,37 @@ header{
 .prevNext span:nth-child(2){
     margin-right: 20px;
 }
+
+/* now, make it responsive */
+@media (max-width:991px){
+    .main{
+        padding: 40px;
+    }
+    header{
+        padding: 20px 40px;
+    }
+    .logo{
+        max-width: 70px;
+    }
+    .content{
+        flex-direction: column;
+        margin: 120px 0 40px;
+    }
+    .content .text{
+        max-width: 100%;
+    }
+    .content .text h2{
+        font-size: 4em;
+    }
+    .slide{
+        margin-top: 40px;
+    }
+    .slide .slides img{
+        width: 100%;
+        max-width: 420px;
+    }
+    .footer{
+        position: relative;
+        padding: 0;
+    }
+}
