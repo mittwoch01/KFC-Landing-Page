@@ -235,6 +235,10 @@ header{
         margin: 10px 0;
         display: inline-flex;
     }
+    .navigation li a:hover{
+        font-size: 3em;
+        transition: 0.55s;
+    }
     .content{
         flex-direction: column;
         margin: 120px 0 40px;
