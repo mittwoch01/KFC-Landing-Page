@@ -100,7 +100,7 @@ header{
 }
 .slide .slides img{
     width: 100%;
-    min-width: 600px;
+    max-width: 600px;
 }
 
 /* footer ======================== */
@@ -174,6 +174,67 @@ header{
     .logo{
         max-width: 70px;
     }
+    .toggle{
+        position: relative;
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 40px;
+        /* background: #111; */
+        cursor: pointer;
+    }
+    .toggle.active{
+        position: fixed;
+        right: 40px;
+    }
+    .toggle::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: translateY(-10px);
+        box-shadow: 0 10px 0 #fff;
+        transition: 0.25s;
+    }
+    .toggle.active::before{
+        transform: translateY(0px) rotate(45deg);
+        box-shadow: 0 0 0 #fff;
+    }
+    .toggle::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: translateY(10px);
+        transition: 0.25s;
+    }
+    .toggle.active::after{
+        transform: translateY(0px) rotate(-45deg);
+    }
+    .navigation{
+        display: none;
+    }
+    .navigation.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        background: #d10a20;
+    }
+    .navigation li a{
+        font-size: 1.5em;
+        margin: 10px 0;
+        display: inline-flex;
+    }
     .content{
         flex-direction: column;
         margin: 120px 0 40px;
@@ -184,15 +245,41 @@ header{
     .content .text h2{
         font-size: 4em;
     }
+
     .slide{
         margin-top: 40px;
     }
     .slide .slides img{
         width: 100%;
         max-width: 420px;
+        margin-top: 40px;
     }
+
     .footer{
         position: relative;
         padding: 0;
+    }
+}
+
+@media (max-width:480px){
+    header,
+    .main{
+        padding: 20px;
+    }
+    .toggle.active{
+        right: 20px;
+    }
+    .content .text h2{
+        font-size: 3em;
+    }
+    .btn{
+        padding: 15px 30px;
+    }
+    .footer{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .sci{
+        margin-top: 40px;
     }
 }
